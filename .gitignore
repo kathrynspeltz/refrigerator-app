@@ -36,3 +36,7 @@ build/
 
 ### Mac OS ###
 .DS_Store
+
+application.properties
+src/main/resources/application.properties
+Refrigerator Organizer/src/main/resources/application.properties
