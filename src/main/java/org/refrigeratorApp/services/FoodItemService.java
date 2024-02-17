@@ -8,15 +8,15 @@ import java.util.Optional;
 
 public interface FoodItemService {
     @Transactional
-    void addFoodItem(FoodItemDto FoodItemDto, Long userId);
+    static void addFoodItem(FoodItemDto foodItemDto, Long userId);
 
     @Transactional
-    void deleteFoodItemById(Long FoodItemId);
+    void deleteFoodItemById(Long foodItemId);
 
     @Transactional
-    void updateFoodItemById(FoodItemDto FoodItemDto);
+    static void updateFoodItemById(FoodItemDto foodItemDto);
 
-    List<FoodItemDto> getAllFoodItemsByUserId(Long userId);
+    static List<FoodItemDto> getAllFoodItemsByUserId(Long userId);
 
-    Optional<FoodItemDto> getFoodItemById(Long FoodItemId);
+    static Optional<FoodItemDto> getFoodItemById(Long foodItemId);
 }
