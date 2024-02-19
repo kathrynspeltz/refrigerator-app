@@ -9,6 +9,6 @@ public interface UserService {
     @Transactional
     List<String> addUser(UserDto userDto);
 
-    @javax.transaction.Transactional
+
     List<String> userLogin(UserDto userDto);
 }

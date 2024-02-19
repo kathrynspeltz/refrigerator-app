@@ -17,26 +17,26 @@ public class FoodItemController {
 
     @GetMapping("/user/{userId}")
     public List<FoodItemDto> getAllFoodItemsByUserId(@PathVariable Long userId){
-        return FoodItemService.getAllFoodItemsByUserId(userId);
+        return foodItemService.getAllFoodItemsByUserId(userId);
     }
 
     @GetMapping("/{FoodItemId}")
     public Optional<FoodItemDto> getFoodItemById(@PathVariable Long FoodItemId){
-        return FoodItemService.getFoodItemById(FoodItemId);
+        return foodItemService.getFoodItemById(FoodItemId);
     }
 
     @PostMapping("/user/{userId}")
     public void addFoodItem(@RequestBody FoodItemDto FoodItemDto, @PathVariable Long userId){
-        FoodItemService.addFoodItem(FoodItemDto, userId);
+        foodItemService.addFoodItem(FoodItemDto, userId);
     }
 
     @DeleteMapping("/{FoodItemId}")
     public void deleteFoodItemById(@PathVariable Long FoodItemId){
-        FoodItemService.deleteFoodItemById(FoodItemId);
+        foodItemService.deleteFoodItemById(FoodItemId);
     }
 
     @PutMapping
     public void updateFoodItem(@RequestBody FoodItemDto FoodItemDto){
-        FoodItemService.updateFoodItemById(FoodItemDto);
+        foodItemService.updateFoodItemById(FoodItemDto);
     }
 }
